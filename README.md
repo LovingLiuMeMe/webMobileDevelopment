@@ -115,14 +115,14 @@ export function dpConvertTopx(dp) {
 <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
 ```
 复制代码上面是viewport的一个配置，我们来看看它们的具体含义:  
-Value | 可能值 | 描述
----|---|---
-width | 正整数或device-width | 以pixels（像素）为单位， 定义布局视口的宽度。
-height | 正整数或device-height | 以pixels（像素）为单位， 定义布局视口的高度。
-initial-scale | 0.0 - 10.0 | 定义页面初始缩放比率。
-minimum-scale | 0.0 - 10.0 | 定义缩放的最小值；必须小于或等于maximum-scale的值。
-maximum-scale | 0.0 - 10.0 | 0.0 - 10.0
-user-scalable | 一个布尔值（yes或者no） | 如果设置为 no，用户将不能放大或缩小网页。默认值为 yes。
+| Value  | 可能值 | 描述 | 
+| - | :-: | -: | 
+| width | 正整数或device-width| 以pixels（像素）为单位， 定义布局视口的宽度。 | 
+| height  | 正整数或device-height | 以pixels（像素）为单位， 定义布局视口的高度。 | 
+| initial-scale | 0.0 - 10.0 | 定义页面初始缩放比率。 |
+| minimum-scale | 0.0 - 10.0 | 定义缩放的最小值；必须小于或等于maximum-scale的值。 |
+| maximum-scale| 0.0 - 10.0 | 定义缩放的最大值；必须大于或等于minimum-scale的值。 |
+| user-scalable | 一个布尔值（yes或者no） | 如果设置为 no，用户将不能放大或缩小网页。默认值为 yes。 |
 
 #### 3.5移动端适配
 为了在移动端让页面获得更好的显示效果，我们必须让布局视口、视觉视口都尽可能等于理想视口。
@@ -378,9 +378,3 @@ dpr等于2 表示1个css像素用2X2个设备像素来绘制
 每英寸的物理像素点（物理像素密度）
 ppi=Math.sqrt((Math.pow(1792)+Math.pow(828))/6.06) = 326ppi
 屏幕的横向像素 屏幕的竖向像素 屏幕对角线英寸距离
-
-| Name | Academy | score | 
-| - | :-: | -: | 
-| Harry Potter | Gryffindor| 90 | 
-| Hermione Granger | Gryffindor | 100 | 
-| Draco Malfoy | Slytherin | 90 |
