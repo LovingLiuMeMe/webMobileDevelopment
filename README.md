@@ -378,3 +378,9 @@ dpr等于2 表示1个css像素用2X2个设备像素来绘制
 每英寸的物理像素点（物理像素密度）
 ppi=Math.sqrt((Math.pow(1792)+Math.pow(828))/6.06) = 326ppi
 屏幕的横向像素 屏幕的竖向像素 屏幕对角线英寸距离
+
+| Name | Academy | score | 
+| - | :-: | -: | 
+| Harry Potter | Gryffindor| 90 | 
+| Hermione Granger | Gryffindor | 100 | 
+| Draco Malfoy | Slytherin | 90 |
