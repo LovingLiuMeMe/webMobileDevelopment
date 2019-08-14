@@ -42,6 +42,8 @@
                 与( and )
                 或( , )
                 非( not )
+
+                注意:','前面和后面都分别为一个表达式（整体） 
         */
         /*@media screen and (min-width: 900px) and (max-width: 1024px) {
             body {
@@ -58,13 +60,19 @@
                 background-color: red;
             }
         }*/
-
-        /*@media not screen and (min-width: 900px) and (max-width: 1024px) {
+        
+        /*
+          not后面所有的 and表达式 直到遇到 ',' 为止
+          相当于 not（screen and (min-width: 900px) and (max-width: 1024px)）
+        @media not screen and (min-width: 900px) and (max-width: 1024px) {
             body {
                 background-color: red;
             }
         }*/
-        /*@media not screen and (min-width: 1024px), screen and (max-width: 900px) {
+
+        /*
+          相当于 not（screen and (min-width: 1024px)）,screen and (max-width: 900px)
+        @media not screen and (min-width: 1024px), screen and (max-width: 900px) {
             body {
                 background-color: red;
             }
@@ -74,8 +82,8 @@
         /*
             5. 媒体特征表达式
                 width/max-width/min-width
-                -webkit-device-pixel-ratio/-webkit-max-device-pixel-ratio/-webkit-min-pixel-ratio
-                orientation
+                -webkit-device-pixel-ratio/-webkit-max-device-pixel-ratio/-webkit-min-pixel-ratio 设备像素比
+                orientation 横屏 竖屏
                     landscape/portrait
 
                 height
