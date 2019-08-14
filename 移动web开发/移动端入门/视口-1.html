@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 100%;
+      height: 100%;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    11111111111111111111111111111111111111111111111111111111
+  </div>
+</body>
+<script>
+  console.log("viewpoint 宽度"+window.innerWidth)
+  // init-scale = 1
+    //未加viewpoint配置之前--------------
+    //viewpoint 宽度1280
+    // 改为 iphoneX
+    //viewpoint 宽度981
+    //加viewpoint配置之后----------------
+    //viewpoint 宽度735
+    // 改为 iphoneX
+    //viewpoint 宽度375 (和理想视口:浏览器规定的固定宽度一样)
+  
+  // init-scale = 2
+    // iphoneX下
+    // viewpoint 宽度188
+
+  // 说明window.innerWidth获得是视觉视口（浏览器可视区域大小）
+
+</script>
+</html>

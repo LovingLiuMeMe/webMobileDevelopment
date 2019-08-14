@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container{
+  width: 800px;
+  height: 400px;
+  border: solid 1px orange;
+  margin: 50px auto;
+  display: flex;
+}
+.container-1{
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content:space-between;
+}
+.container-1 > div.item{
+  width: 100px;
+  height: 40px;
+  border: solid 1px red;
+}
+.container-1 > div.item:nth-child(1){
+height: 20px;
+}
+.container-1 > div.item:nth-child(2){
+height: 60px;
+}
+.container-1 > div.item:nth-child(3){
+height: 100px;
+}
+.container-1 > div.item:nth-child(4){
+height: 140px;
+}
+</style>
+<body>
+  <div class="container container-1">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+  </div>
+  <div class="container container-2">
+
+  </div>
+</body>
+</html>

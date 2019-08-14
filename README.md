@@ -1,4 +1,9 @@
 ##移动端开发的基础知识
+CSS像素（CSS Pixel）：适用于web编程，指的是我们在样式代码中使用到的逻辑像素，是一个抽象概念，实际并不存在
+
+设备独立像素（Device Independent Pixel）：与设备无关的逻辑像素，代表可以通过程序控制使用的虚拟像素，是一个总体概念，包括了CSS像素
+
+设备像素（Device Pixel）：物理像素，设备能控制显示的最小单位，我们常说的1920×1080像素分辨率就是用的设备像素单位
 
 ### 一.分辨率
 像素即一个小方块，它具有特定的位置和颜色。  
@@ -102,12 +107,11 @@ export function dpConvertTopx(dp) {
 我们可以通过调用`window.innerWidth` / `innerHeight`来获取视觉视口大小。  
 
 #### 3.3 理想视口
-布局视口在移动端展示的效果并不是一个理想的效果，所以理想视口(ideal viewport)就诞生了：网站页面在移动端展示的理想大小。  
+为浏览器定义的可完美适配移动端的理想 viewport，固定不变，可以认为是设备视口宽度。比如 iphone 7 为 375px, iphone 7p 为 414px。  
 在浏览器调试移动端时页面上给定的像素大小就是理想视口大小，它的单位正是设备独立像素。  
 上面在介绍CSS像素时曾经提到页面的缩放系数 = CSS像素 / 设备独立像素，实际上说页面的缩放系数 = 理想视口宽度 / 视觉视口宽度更为准确。  
 所以，当页面缩放比例为100%时，CSS像素 = 设备独立像素，理想视口 = 视觉视口。  
 我们可以通过调用screen.width / height来获取理想视口大小。  
-
 #### 3.4 Meta viewport
 `<meta>` 元素表示那些不能由其它HTML元相关元素之一表示的任何元数据信息，它可以告诉浏览器如何解析页面。  
 我们可以借助`<meta>`元素的`viewport`来帮助我们`设置视口`、`缩放`等，从而让移动端得到更好的展示效果。  
@@ -141,9 +145,20 @@ window.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条�
 window.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。
 window.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比
 window.screen.availHeight：浏览器窗口可用的高度。
-document.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。
+document.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。(document.documentElement)其实是html
 document.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。
 document.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。
+```
+```js
+```css
+// 设定两个变量：  
+viewport_1 = width;  
+viewport_2 = idealviewport / initial-scale;
+
+// 则：  
+layoutviewport = max{viewport_1, viewport_2};  
+visualviewport = viewport_2;
+```
 ```
 ### 四.1px问题
 为了适配各种屏幕，我们写代码时一般使用设备独立像素来对页面进行布局。  
