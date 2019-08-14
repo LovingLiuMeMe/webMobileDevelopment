@@ -19,7 +19,8 @@
   </div>
 </body>
 <script>
-  console.log("viewpoint 宽度"+window.innerWidth)
+  console.log("视觉视口 宽度"+window.innerWidth)
+  console.log("布局视口 宽度"+document.documentElement.clientWidth)
   // init-scale = 1
     //未加viewpoint配置之前--------------
     //viewpoint 宽度1280
@@ -33,7 +34,8 @@
   // init-scale = 2
     // iphoneX下
     // viewpoint 宽度188
-
+    // 视觉视口 宽度188
+    // 布局视口 宽度375
   // 说明window.innerWidth获得是视觉视口（浏览器可视区域大小）
 
 </script>
